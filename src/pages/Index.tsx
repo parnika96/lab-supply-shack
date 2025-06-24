@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
@@ -12,7 +11,7 @@ const Index = () => {
     {
       name: "Digital Microscope DM-500",
       price: "₹1,85,000",
-      image: "🔬",
+      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=300&fit=crop",
       description: "High-resolution digital microscope with 4K imaging for chemical analysis",
       category: "Microscopy",
       features: ["4K Resolution", "USB Connectivity", "LED Illumination"]
@@ -20,7 +19,7 @@ const Index = () => {
     {
       name: "Analytical Balance AB-220",
       price: "₹95,000",
-      image: "⚖️",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
       description: "Precision analytical balance with 0.1mg readability for chemical weighing",
       category: "Weighing",
       features: ["0.1mg Precision", "Internal Calibration", "Draft Shield"]
@@ -28,7 +27,7 @@ const Index = () => {
     {
       name: "Laboratory Centrifuge LC-12",
       price: "₹2,35,000",
-      image: "🧪",
+      image: "https://images.unsplash.com/photo-1576671081837-49000212a370?w=400&h=300&fit=crop",
       description: "High-speed benchtop centrifuge for chemical sample preparation",
       category: "Separation",
       features: ["12,000 RPM", "Refrigerated", "Safety Interlock"]
@@ -36,7 +35,7 @@ const Index = () => {
     {
       name: "Rotary Evaporator RE-52",
       price: "₹4,50,000",
-      image: "⚗️",
+      image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&h=300&fit=crop",
       description: "Advanced rotary evaporator for solvent removal and concentration",
       category: "Distillation",
       features: ["Digital Display", "Vacuum Control", "Water Bath"]
@@ -44,7 +43,7 @@ const Index = () => {
     {
       name: "pH Meter PH-700",
       price: "₹25,000",
-      image: "🧬",
+      image: "https://images.unsplash.com/photo-1628595351029-c2bf17511435?w=400&h=300&fit=crop",
       description: "Digital pH meter with automatic temperature compensation",
       category: "Analysis",
       features: ["ATC Function", "Data Logger", "Calibration Memory"]
@@ -52,7 +51,7 @@ const Index = () => {
     {
       name: "Fume Hood FH-1500",
       price: "₹1,25,000",
-      image: "🏭",
+      image: "https://images.unsplash.com/photo-1606844901531-51b2c1e66b75?w=400&h=300&fit=crop",
       description: "Chemical fume hood with variable air flow for safety",
       category: "Safety",
       features: ["Variable Airflow", "Sash Alarm", "Energy Efficient"]

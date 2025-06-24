@@ -18,7 +18,11 @@ const ProductCard = ({ name, price, image, description, category, features }: Pr
       <CardHeader className="p-0">
         <div className="relative overflow-hidden">
           <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-            <span className="text-6xl">{image}</span>
+            <img 
+              src={image} 
+              alt={name}
+              className="w-full h-full object-cover"
+            />
           </div>
           <Badge className="absolute top-4 left-4 bg-blue-600">{category}</Badge>
         </div>
