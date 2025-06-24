@@ -3,8 +3,9 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import CategoryCard from "@/components/CategoryCard";
-import Contact from "@/components/Contact";
-import { Microscope, FlaskConical, TestTube, Scale, Thermometer, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Microscope, FlaskConical, TestTube, Scale, Mail, Phone } from "lucide-react";
 
 const Index = () => {
   const featuredProducts = [
@@ -12,9 +13,9 @@ const Index = () => {
       name: "Digital Microscope DM-500",
       price: "$2,499",
       image: "🔬",
-      description: "High-resolution digital microscope with 4K imaging capabilities",
+      description: "High-resolution digital microscope with 4K imaging",
       category: "Microscopy",
-      features: ["4K Resolution", "USB Connectivity", "LED Illumination", "Software Included"]
+      features: ["4K Resolution", "USB Connectivity", "LED Illumination"]
     },
     {
       name: "Analytical Balance AB-220",
@@ -22,7 +23,7 @@ const Index = () => {
       image: "⚖️",
       description: "Precision analytical balance with 0.1mg readability",
       category: "Weighing",
-      features: ["0.1mg Precision", "Internal Calibration", "Draft Shield", "Data Logging"]
+      features: ["0.1mg Precision", "Internal Calibration", "Draft Shield"]
     },
     {
       name: "Laboratory Centrifuge LC-12",
@@ -30,76 +31,38 @@ const Index = () => {
       image: "🌀",
       description: "High-speed benchtop centrifuge for sample preparation",
       category: "Separation",
-      features: ["12,000 RPM", "Refrigerated", "Safety Interlock", "Multiple Rotors"]
-    },
-    {
-      name: "pH Meter PM-100",
-      price: "$599",
-      image: "📊",
-      description: "Portable pH meter with automatic temperature compensation",
-      category: "Analysis",
-      features: ["Auto Calibration", "ATC Function", "Waterproof", "Data Storage"]
-    },
-    {
-      name: "Laboratory Incubator LI-75",
-      price: "$1,899",
-      image: "🔥",
-      description: "Temperature-controlled incubator for biological applications",
-      category: "Environmental",
-      features: ["±0.1°C Accuracy", "75L Capacity", "Digital Display", "Over-temp Protection"]
-    },
-    {
-      name: "Spectrophotometer SP-200",
-      price: "$4,599",
-      image: "📈",
-      description: "UV-Vis spectrophotometer for quantitative analysis",
-      category: "Analysis",
-      features: ["UV-Vis Range", "1nm Bandwidth", "PC Software", "Cuvette Holder"]
+      features: ["12,000 RPM", "Refrigerated", "Safety Interlock"]
     }
   ];
 
   const categories = [
     {
       title: "Microscopy",
-      description: "Advanced imaging and observation equipment",
+      description: "Advanced imaging equipment",
       Icon: Microscope,
       color: "bg-blue-500",
       count: 45
     },
     {
       title: "Glassware",
-      description: "Laboratory glassware and consumables",
+      description: "Laboratory glassware",
       Icon: FlaskConical,
       color: "bg-green-500",
       count: 120
     },
     {
       title: "Analysis",
-      description: "Analytical instruments and testing equipment",
+      description: "Testing equipment",
       Icon: TestTube,
       color: "bg-purple-500",
       count: 78
     },
     {
       title: "Weighing",
-      description: "Precision balances and weighing solutions",
+      description: "Precision balances",
       Icon: Scale,
       color: "bg-orange-500",
       count: 32
-    },
-    {
-      title: "Temperature",
-      description: "Heating, cooling, and temperature control",
-      Icon: Thermometer,
-      color: "bg-red-500",
-      count: 56
-    },
-    {
-      title: "Electrical",
-      description: "Power supplies and electrical equipment",
-      Icon: Zap,
-      color: "bg-yellow-500",
-      count: 29
     }
   ];
 
@@ -109,15 +72,10 @@ const Index = () => {
       <Hero />
       
       {/* Categories Section */}
-      <section id="categories" className="py-20">
+      <section id="categories" className="py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Product Categories</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Explore our comprehensive range of laboratory equipment across multiple categories
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Our Categories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((category, index) => (
               <CategoryCard key={index} {...category} />
             ))}
@@ -126,15 +84,10 @@ const Index = () => {
       </section>
 
       {/* Featured Products Section */}
-      <section id="products" className="py-20 bg-gray-50">
+      <section id="products" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Featured Products</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Discover our most popular laboratory equipment, trusted by researchers worldwide
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Featured Products</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredProducts.map((product, index) => (
               <ProductCard key={index} {...product} />
             ))}
@@ -142,76 +95,35 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <h3 className="text-4xl font-bold mb-2">500+</h3>
-              <p className="text-blue-100">Products Available</p>
+      {/* Simple Contact Section */}
+      <section id="contact" className="py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-8">Contact Us</h2>
+          <div className="max-w-md mx-auto space-y-4">
+            <div className="flex items-center justify-center space-x-3">
+              <Phone className="h-5 w-5 text-blue-600" />
+              <span>+1 (555) 123-4567</span>
             </div>
-            <div>
-              <h3 className="text-4xl font-bold mb-2">1,000+</h3>
-              <p className="text-blue-100">Satisfied Customers</p>
+            <div className="flex items-center justify-center space-x-3">
+              <Mail className="h-5 w-5 text-blue-600" />
+              <span>sales@labequippro.com</span>
             </div>
-            <div>
-              <h3 className="text-4xl font-bold mb-2">15+</h3>
-              <p className="text-blue-100">Years Experience</p>
-            </div>
-            <div>
-              <h3 className="text-4xl font-bold mb-2">24/7</h3>
-              <p className="text-blue-100">Technical Support</p>
+            <div className="flex space-x-2 mt-6">
+              <Input placeholder="Your email" className="flex-1" />
+              <Button className="bg-blue-600 hover:bg-blue-700">Get Quote</Button>
             </div>
           </div>
         </div>
       </section>
 
-      <Contact />
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <Microscope className="h-8 w-8 text-blue-400" />
-                <span className="text-xl font-bold">LabEquip Pro</span>
-              </div>
-              <p className="text-gray-400">
-                Your trusted partner for high-quality laboratory equipment and scientific instruments.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Products</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>Microscopes</li>
-                <li>Analytical Instruments</li>
-                <li>Laboratory Furniture</li>
-                <li>Safety Equipment</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>Installation</li>
-                <li>Maintenance</li>
-                <li>Training</li>
-                <li>Technical Support</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>About Us</li>
-                <li>Contact</li>
-                <li>Careers</li>
-                <li>News</li>
-              </ul>
-            </div>
+      {/* Simple Footer */}
+      <footer className="bg-gray-800 text-white py-8">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <Microscope className="h-6 w-6 text-blue-400" />
+            <span className="text-lg font-bold">LabEquip Pro</span>
           </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 LabEquip Pro. All rights reserved.</p>
-          </div>
+          <p className="text-gray-400">&copy; 2024 LabEquip Pro. All rights reserved.</p>
         </div>
       </footer>
     </div>
