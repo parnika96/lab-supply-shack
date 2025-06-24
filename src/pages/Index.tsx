@@ -11,58 +11,82 @@ const Index = () => {
   const featuredProducts = [
     {
       name: "Digital Microscope DM-500",
-      price: "$2,499",
+      price: "₹1,85,000",
       image: "🔬",
-      description: "High-resolution digital microscope with 4K imaging",
+      description: "High-resolution digital microscope with 4K imaging for chemical analysis",
       category: "Microscopy",
       features: ["4K Resolution", "USB Connectivity", "LED Illumination"]
     },
     {
       name: "Analytical Balance AB-220",
-      price: "$1,299",
+      price: "₹95,000",
       image: "⚖️",
-      description: "Precision analytical balance with 0.1mg readability",
+      description: "Precision analytical balance with 0.1mg readability for chemical weighing",
       category: "Weighing",
       features: ["0.1mg Precision", "Internal Calibration", "Draft Shield"]
     },
     {
       name: "Laboratory Centrifuge LC-12",
-      price: "$3,199",
-      image: "🌀",
-      description: "High-speed benchtop centrifuge for sample preparation",
+      price: "₹2,35,000",
+      image: "🧪",
+      description: "High-speed benchtop centrifuge for chemical sample preparation",
       category: "Separation",
       features: ["12,000 RPM", "Refrigerated", "Safety Interlock"]
+    },
+    {
+      name: "Rotary Evaporator RE-52",
+      price: "₹4,50,000",
+      image: "⚗️",
+      description: "Advanced rotary evaporator for solvent removal and concentration",
+      category: "Distillation",
+      features: ["Digital Display", "Vacuum Control", "Water Bath"]
+    },
+    {
+      name: "pH Meter PH-700",
+      price: "₹25,000",
+      image: "🧬",
+      description: "Digital pH meter with automatic temperature compensation",
+      category: "Analysis",
+      features: ["ATC Function", "Data Logger", "Calibration Memory"]
+    },
+    {
+      name: "Fume Hood FH-1500",
+      price: "₹1,25,000",
+      image: "🏭",
+      description: "Chemical fume hood with variable air flow for safety",
+      category: "Safety",
+      features: ["Variable Airflow", "Sash Alarm", "Energy Efficient"]
     }
   ];
 
   const categories = [
     {
-      title: "Microscopy",
-      description: "Advanced imaging equipment",
-      Icon: Microscope,
+      title: "Chemical Analysis",
+      description: "Analytical instruments for chemical testing",
+      Icon: TestTube,
       color: "bg-blue-500",
+      count: 85
+    },
+    {
+      title: "Glassware & Plasticware",
+      description: "Laboratory glassware and plastic consumables",
+      Icon: FlaskConical,
+      color: "bg-green-500",
+      count: 200
+    },
+    {
+      title: "Microscopy",
+      description: "Microscopes and imaging equipment",
+      Icon: Microscope,
+      color: "bg-purple-500",
       count: 45
     },
     {
-      title: "Glassware",
-      description: "Laboratory glassware",
-      Icon: FlaskConical,
-      color: "bg-green-500",
-      count: 120
-    },
-    {
-      title: "Analysis",
-      description: "Testing equipment",
-      Icon: TestTube,
-      color: "bg-purple-500",
-      count: 78
-    },
-    {
-      title: "Weighing",
-      description: "Precision balances",
+      title: "Weighing & Measuring",
+      description: "Precision balances and measuring instruments",
       Icon: Scale,
       color: "bg-orange-500",
-      count: 32
+      count: 60
     }
   ];
 
@@ -87,7 +111,7 @@ const Index = () => {
       <section id="products" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Featured Products</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProducts.map((product, index) => (
               <ProductCard key={index} {...product} />
             ))}
@@ -102,11 +126,11 @@ const Index = () => {
           <div className="max-w-md mx-auto space-y-4">
             <div className="flex items-center justify-center space-x-3">
               <Phone className="h-5 w-5 text-blue-600" />
-              <span>+1 (555) 123-4567</span>
+              <span>+91 98765 43210</span>
             </div>
             <div className="flex items-center justify-center space-x-3">
               <Mail className="h-5 w-5 text-blue-600" />
-              <span>sales@labequippro.com</span>
+              <span>sales@balajitraders.com</span>
             </div>
             <div className="flex space-x-2 mt-6">
               <Input placeholder="Your email" className="flex-1" />
@@ -120,10 +144,10 @@ const Index = () => {
       <footer className="bg-gray-800 text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <Microscope className="h-6 w-6 text-blue-400" />
-            <span className="text-lg font-bold">LabEquip Pro</span>
+            <FlaskConical className="h-6 w-6 text-blue-400" />
+            <span className="text-lg font-bold">Balaji Scientific Traders</span>
           </div>
-          <p className="text-gray-400">&copy; 2024 LabEquip Pro. All rights reserved.</p>
+          <p className="text-gray-400">&copy; 2024 Balaji Scientific Traders. All rights reserved.</p>
         </div>
       </footer>
     </div>
