@@ -55,6 +55,54 @@ const Index = () => {
       description: "Chemical fume hood with variable air flow for safety",
       category: "Safety",
       features: ["Variable Airflow", "Sash Alarm", "Energy Efficient"]
+    },
+    {
+      name: "Spectrophotometer SP-300",
+      price: "₹3,75,000",
+      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=300&fit=crop",
+      description: "UV-Vis spectrophotometer for quantitative chemical analysis",
+      category: "Analysis",
+      features: ["UV-Vis Range", "Automatic Sampling", "PC Interface"]
+    },
+    {
+      name: "Laboratory Incubator IN-250",
+      price: "₹85,000",
+      image: "https://images.unsplash.com/photo-1582719201952-c7f8e9c0b4e2?w=400&h=300&fit=crop",
+      description: "Temperature controlled incubator for biological samples",
+      category: "Incubation",
+      features: ["±0.1°C Accuracy", "Digital Display", "Timer Function"]
+    },
+    {
+      name: "Autoclave AC-100",
+      price: "₹1,95,000",
+      image: "https://images.unsplash.com/photo-1559757202-c3f28e6cd28e?w=400&h=300&fit=crop",
+      description: "Steam sterilizer for laboratory equipment and glassware",
+      category: "Sterilization",
+      features: ["134°C Max Temp", "Pressure Gauge", "Safety Valve"]
+    },
+    {
+      name: "Chemical Hood CH-180",
+      price: "₹2,15,000",
+      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&h=300&fit=crop",
+      description: "Walk-in chemical fume hood for large equipment handling",
+      category: "Safety",
+      features: ["Large Work Area", "Variable Speed Fan", "Emergency Stop"]
+    },
+    {
+      name: "Magnetic Stirrer MS-400",
+      price: "₹15,000",
+      image: "https://images.unsplash.com/photo-1628595351029-c2bf17511435?w=400&h=300&fit=crop",
+      description: "Digital magnetic stirrer with heating plate",
+      category: "Mixing",
+      features: ["Speed Control", "Heating Function", "Digital Display"]
+    },
+    {
+      name: "Laboratory Freezer LF-80",
+      price: "₹45,000",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
+      description: "Ultra-low temperature freezer for sample storage",
+      category: "Storage",
+      features: ["-80°C Capability", "Alarm System", "Energy Efficient"]
     }
   ];
 
